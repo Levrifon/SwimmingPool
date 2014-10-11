@@ -10,8 +10,8 @@ import resource.Resource;
 
 
 public abstract class ResourcePool<T extends Resource>  {
-	List<T> freeResources;
-	Set<T> busyResources;
+	private List<T> freeResources;
+	private Set<T> busyResources;
 	
 	public ResourcePool(int nbResource) {
 		freeResources = new ArrayList<T>();
@@ -39,5 +39,13 @@ public abstract class ResourcePool<T extends Resource>  {
 		} else {
 			freeResources.add(resource);
 		}
+	}
+	
+	public List<T> getFreeResources() {
+		return this.freeResources;
+	}
+	
+	public Set<T> getBusyResources() {
+		return this.busyResources;
 	}
 }
