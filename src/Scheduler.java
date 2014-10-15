@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 import exception.ActionFinishedException;
@@ -8,6 +9,7 @@ public abstract class Scheduler extends Action {
 	
 	public Scheduler() {
 		super();
+		actions = new ArrayList<Action>();
 	}
 	@Override
 	public boolean isFinished() {
