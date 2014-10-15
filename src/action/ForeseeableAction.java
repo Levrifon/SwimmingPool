@@ -1,3 +1,4 @@
+package action;
 
 public class ForeseeableAction extends Action {
 	protected int remainingSteps;

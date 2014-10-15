@@ -1,3 +1,5 @@
+import action.FairScheduler;
+import action.Swimmer;
 import exception.ActionFinishedException;
 import pool.BasketPool;
 import pool.CubiclePool;
