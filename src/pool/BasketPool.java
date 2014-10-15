@@ -11,7 +11,7 @@ public class BasketPool extends ResourcePool<Basket>{
 	@Override
 	protected void createPool(int nbResource) {
 		for(int i = 0 ; i <nbResource; i++) {
-			this.getFreeResources().add(new Basket());
+			this.freeResources.add(new Basket());
 		}
 		
 	}

@@ -9,6 +9,8 @@ public class CubiclePool extends ResourcePool<Cubicle>{
 
 	@Override
 	protected void createPool(int nbResource) {
-		
+		for(int i = 0 ; i <nbResource; i++) {
+			this.freeResources.add(new Cubicle());
+		}
 	}
 }

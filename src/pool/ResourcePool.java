@@ -10,15 +10,18 @@ import resource.Resource;
 
 
 public abstract class ResourcePool<T extends Resource>  {
-	private List<T> freeResources;
-	private Set<T> busyResources;
+	protected List<T> freeResources;
+	protected Set<T> busyResources;
 	
 	public ResourcePool(int nbResource) {
 		freeResources = new ArrayList<T>();
 		busyResources = new HashSet<T>();
 		this.createPool(nbResource);
 	}
-
+	/**
+	 * Create a pool of the size of nbResource
+	 * @param nbResource number of elements in the pool
+	 */
 	protected abstract void createPool(int nbResource);
 	
 	public T provideResource() {

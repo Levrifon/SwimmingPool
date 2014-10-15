@@ -1,15 +1,19 @@
 import pool.BasketPool;
 import pool.CubiclePool;
-
+/**
+ * 
+ * @author debue,charneux
+ *
+ */
 
 public class Swimmer {
+
 private String name;
 private BasketPool basket;
 private CubiclePool cubicle;
 private int unwearTime,swimmingTime,wearTime;
 
-	public Swimmer(String name, BasketPool baskets, CubiclePool cubicles,
-			int i, int j, int k) {
+	public Swimmer(String name, BasketPool baskets, CubiclePool cubicles,int i, int j, int k) {
 		this.setName(name);
 		this.basket = baskets;
 		this.cubicle = cubicles;
