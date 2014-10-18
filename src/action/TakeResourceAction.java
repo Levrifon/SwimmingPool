@@ -10,7 +10,6 @@ public class TakeResourceAction<T extends Resource> extends Action {
 	private boolean fini;
 	private ResourcefulUser<T> user;
 	private ResourcePool<T> pool;
-	private Resource resource;
 	
 	public TakeResourceAction(ResourcefulUser<T> user, ResourcePool<T> pool) {
 		super();
@@ -26,10 +25,9 @@ public class TakeResourceAction<T extends Resource> extends Action {
 
 	@Override
 	protected void doRealStep() {
-		fini = true;
 		try {
-			resource = pool.provideResource();
 			user.setResource(pool.provideResource());
+			fini = true;
 		}catch(NoSuchElementException e) {
 			System.err.println("Impossible de prendre une ressource");
 		}
