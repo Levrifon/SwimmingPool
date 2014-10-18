@@ -14,9 +14,6 @@ public class ResourcefulUser<R extends Resource>{
 		return resource;
 	}
 	
-	public void takeResource(ResourcePool<R> ressources){
-		TakeResourceAction<R> tra = new TakeResourceAction<R>(this, ressources); 
-	}
 	public void resetResource() {
 		this.resource = null;
 	}
