@@ -23,7 +23,7 @@ protected boolean ready;
 	}
 	
 	public boolean isReady() {
-		return true;
+		return ready;
 	}
 	protected abstract void doRealStep();
 

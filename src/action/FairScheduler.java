@@ -27,7 +27,9 @@ public class FairScheduler extends Scheduler {
 		
 	}
 	public void addAction(Swimmer swimmer) {
-		
+		actions.add(swimmer);
 	}
+	
+	
 
 }

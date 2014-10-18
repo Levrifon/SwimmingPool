@@ -8,7 +8,7 @@ public class ForeseeableAction extends Action {
 	}
 	@Override
 	public boolean isFinished() {
-		if(remainingSteps < 0) throw new IllegalStateException("Impossible a se produire");
+		if(remainingSteps < 0) throw new IllegalStateException("Impossible que cela se produise");
 		return this.remainingSteps == 0;
 	}
 
