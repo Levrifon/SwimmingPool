@@ -5,6 +5,7 @@ import java.util.Iterator;
 public class FairScheduler extends Scheduler {
 	protected Iterator<Action> actionIterator;
 	public FairScheduler() {
+		super();
 		actionIterator = actions.iterator();
 	}
 	@Override
@@ -28,6 +29,7 @@ public class FairScheduler extends Scheduler {
 	}
 	public void addAction(Swimmer swimmer) {
 		actions.add(swimmer);
+		actionIterator = actions.iterator();
 	}
 	
 	

@@ -32,40 +32,21 @@ public class Swimmer extends SequentialScheduler {
 		this.wearTime = k;
 		user_basket = new ResourcefulUser<Basket>();
 		user_cubicle = new ResourcefulUser<Cubicle>();
+		initAction();
 	}
 
-	/**
-	 * take a basket in BasketPoll of the swimmer
-	 */
-	public void takeBasket() {
-		TakeResourceAction<Basket> tra = new TakeResourceAction<Basket>(
-				user_basket, basket);
+	public void initAction(){
+		actions.add(new TakeResourceAction<Basket>(user_basket, basket));
+		actions.add(new TakeResourceAction<Cubicle>(user_cubicle, cubicle));
+		actions.add(new ForeseeableAction(unwearTime));
+		actions.add(new FreeResourceAction<Cubicle>(user_cubicle, cubicle));
+		actions.add(new ForeseeableAction(swimmingTime));
+		actions.add(new TakeResourceAction<Cubicle>(user_cubicle, cubicle));
+		actions.add(new ForeseeableAction(wearTime));
+		actions.add(new FreeResourceAction<Cubicle>(user_cubicle, cubicle));
+		actions.add(new FreeResourceAction<Basket>(user_basket, basket));
 	}
-
-	/**
-	 * free a basket in BasketPoll of the swimmer
-	 */
-	public void freeBasket() {
-		FreeResourceAction<Basket> fra = new FreeResourceAction<Basket>(
-				user_basket, basket);
-	}
-
-	/**
-	 * take a cubicle in CubiclePool of the swimmer
-	 */
-	public void takeCubicle() {
-		TakeResourceAction<Cubicle> tra = new TakeResourceAction<Cubicle>(
-				user_cubicle, cubicle);
-	}
-
-	/**
-	 * free a cubicle in CubiclePool of the swimmer
-	 */
-	public void freeCubicle() {
-		FreeResourceAction<Cubicle> fra = new FreeResourceAction<Cubicle>(
-				user_cubicle, cubicle);
-	}
-
+	
 	public String getName() {
 		return name;
 	}
@@ -104,6 +85,11 @@ public class Swimmer extends SequentialScheduler {
 
 	public BasketPool getBasket() {
 		return basket;
+	}
+
+	@Override
+	public String toString() {
+		return "Swimmer Je s'appelle " + name;
 	}
 
 }

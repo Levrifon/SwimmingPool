@@ -11,5 +11,11 @@ public class SequentialScheduler extends Scheduler {
 	protected Action nextAction() {
 		return this.actions.get(0);
 	}
+	
+	public void doRealStep(){
+		nextAction().doRealStep();
+		/*à voir ou on le mets ce fils de pute*/
+		removeAction();
+	}
 
 }

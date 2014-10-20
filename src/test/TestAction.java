@@ -28,6 +28,16 @@ public class TestAction {
 		}
 		assertFalse(fa.isReady());
 		assertTrue(fa.isInProgress());
+		try {
+			fa.doStep();
+			fa.doStep();
+		} catch (ActionFinishedException e) {
+			e.printStackTrace();
+		}
+		assertTrue(fa.isFinished());
+		assertFalse(fa.isInProgress());
+		assertFalse(fa.isReady());
+
 	}
 
 }

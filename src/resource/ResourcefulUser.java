@@ -1,8 +1,5 @@
 package resource;
 
-import pool.ResourcePool;
-import resource.Resource;
-import action.TakeResourceAction;
 
 public class ResourcefulUser<R extends Resource>{
 	protected R resource;
