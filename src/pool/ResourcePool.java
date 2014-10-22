@@ -25,7 +25,6 @@ public abstract class ResourcePool<T extends Resource>  {
 	protected abstract void createPool(int nbResource);
 	
 	public T provideResource() {
-		System.out.println(freeResources.size());
 		if(!freeResources.isEmpty()) {
 			T action = freeResources.remove(0);
 			busyResources.add(action);
@@ -42,6 +41,10 @@ public abstract class ResourcePool<T extends Resource>  {
 		} else {
 			freeResources.add(resource);
 		}
+	}
+	
+	public String getResourceName(){
+		return "e";
 	}
 	
 	public List<T> getFreeResources() {

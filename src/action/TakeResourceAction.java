@@ -29,7 +29,7 @@ public class TakeResourceAction<T extends Resource> extends Action {
 			user.setResource(pool.provideResource());
 			fini = true;
 		}catch(NoSuchElementException e) {
-			System.err.println("Impossible de prendre une ressource");
+			//System.err.println("Impossible de prendre une ressource");
 		}
 		 
 		

@@ -13,9 +13,11 @@ public class SequentialScheduler extends Scheduler {
 	}
 	
 	public void doRealStep(){
-		nextAction().doRealStep();
-		/*à voir ou on le mets ce fils de pute*/
-		removeAction();
+		Action action = nextAction();
+		action.doRealStep();
+		if(action.isFinished()){
+			removeAction();
+		}
 	}
 
 }

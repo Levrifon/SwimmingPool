@@ -37,14 +37,20 @@ public class Swimmer extends SequentialScheduler {
 
 	public void initAction(){
 		actions.add(new TakeResourceAction<Basket>(user_basket, basket));
+		actions.add( new Message(name + " a pris un panier."));
 		actions.add(new TakeResourceAction<Cubicle>(user_cubicle, cubicle));
-		actions.add(new ForeseeableAction(unwearTime));
+		actions.add( new Message(name + " est entré dans une cabine."));
+		actions.add(new Unwear(unwearTime, this));
 		actions.add(new FreeResourceAction<Cubicle>(user_cubicle, cubicle));
-		actions.add(new ForeseeableAction(swimmingTime));
+		actions.add( new Message(name + " libère la cabine."));
+		actions.add(new Swim(swimmingTime, this));
 		actions.add(new TakeResourceAction<Cubicle>(user_cubicle, cubicle));
-		actions.add(new ForeseeableAction(wearTime));
+		actions.add( new Message(name + " prend une cabine."));
+		actions.add(new Wear(wearTime, this));
 		actions.add(new FreeResourceAction<Cubicle>(user_cubicle, cubicle));
+		actions.add( new Message(name + " libère la cabine."));
 		actions.add(new FreeResourceAction<Basket>(user_basket, basket));
+		actions.add( new Message(name + " a rendu son panier."));
 	}
 	
 	public String getName() {
