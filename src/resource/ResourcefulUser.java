@@ -3,8 +3,10 @@ package resource;
 
 public class ResourcefulUser<R extends Resource>{
 	protected R resource;
+	private String nameUser;
 	
-	public ResourcefulUser() {
+	public ResourcefulUser(String nameUser) {
+		this.nameUser = nameUser;
 	}
 	
 	public R getResource() {
@@ -17,6 +19,10 @@ public class ResourcefulUser<R extends Resource>{
 	
 	public void setResource(R r) {
 		this.resource = r;
+	}
+	
+	public String getNameUser() {
+		return this.nameUser;
 	}
 
 }

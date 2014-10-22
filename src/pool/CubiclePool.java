@@ -13,4 +13,10 @@ public class CubiclePool extends ResourcePool<Cubicle>{
 			this.freeResources.add(new Cubicle());
 		}
 	}
+	
+
+	@Override
+	public String getResourceName() {
+		return "Cabine";
+	}
 }

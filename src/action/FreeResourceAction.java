@@ -34,6 +34,7 @@ public class FreeResourceAction<T extends Resource> extends Action {
 		if (user.getResource() != null) {
 			pool.freeResource(user.getResource());
 			user.setResource(null);
+			System.out.println(user.getNameUser()+ " libère un(e) "+ pool.getResourceName());
 			fini = true;
 		}
 	}

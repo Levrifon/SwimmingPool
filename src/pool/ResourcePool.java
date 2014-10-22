@@ -43,9 +43,7 @@ public abstract class ResourcePool<T extends Resource>  {
 		}
 	}
 	
-	public String getResourceName(){
-		return "e";
-	}
+	public abstract String getResourceName();
 	
 	public List<T> getFreeResources() {
 		return this.freeResources;

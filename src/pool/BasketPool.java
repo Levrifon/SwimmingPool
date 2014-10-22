@@ -16,4 +16,9 @@ public class BasketPool extends ResourcePool<Basket>{
 		
 	}
 
+	@Override
+	public String getResourceName() {
+		return "Basket";
+	}
+
 }

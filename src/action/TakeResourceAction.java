@@ -27,9 +27,10 @@ public class TakeResourceAction<T extends Resource> extends Action {
 	protected void doRealStep() {
 		try {
 			user.setResource(pool.provideResource());
+			System.out.println(user.getNameUser()+ " prend un(e) "+ pool.getResourceName());
 			fini = true;
 		}catch(NoSuchElementException e) {
-			//System.err.println("Impossible de prendre une ressource");
+			System.out.println(user.getNameUser()+ " attends, il n'y a plus de "+ pool.getResourceName());
 		}
 		 
 		
