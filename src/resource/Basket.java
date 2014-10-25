@@ -1,15 +1,16 @@
 package resource;
 
+/**
+ * class representing a basket in a swimming pool.
+ * 
+ * @author dimitri remy
+ * 
+ */
 public class Basket implements Resource {
 
-	private static int cpt = 0 ;
-	private int num ; 
-	
-	public Basket() {this.num = cpt++ ;}
 	@Override
 	public String description() {
-		return "Panier-" + num;
+		return "Panier-";
 	}
-	
 
 }

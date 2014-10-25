@@ -1,6 +1,12 @@
 package resource;
 
-public class Cubicle implements Resource{
+/**
+ * class representing a cubicle from wear and unwear in a swimming pool.
+ * 
+ * @author dimitri
+ * 
+ */
+public class Cubicle implements Resource {
 
 	@Override
 	public String description() {

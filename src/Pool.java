@@ -4,9 +4,17 @@ import exception.ActionFinishedException;
 import pool.BasketPool;
 import pool.CubiclePool;
 
+/**
+ * class for run the application.
+ * 
+ * @author dimitri
+ * 
+ */
 public class Pool {
 
 	/**
+	 * method for run the application
+	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) throws ActionFinishedException {
