@@ -11,7 +11,7 @@ public class ActionFinishedException extends Exception {
 	private static final long serialVersionUID = 1L;
 
 	/**
-	 * Builder from this class
+	 * Constructor of the class
 	 */
 	public ActionFinishedException() {
 

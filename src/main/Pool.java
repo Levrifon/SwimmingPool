@@ -1,3 +1,4 @@
+package main;
 import action.FairScheduler;
 import action.Swimmer;
 import exception.ActionFinishedException;

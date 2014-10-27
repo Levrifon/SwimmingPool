@@ -1,7 +1,7 @@
 package resource;
 
 /**
- * class to stock a resource used by a swimmer
+ * class which handle a resource used by a swimmer
  * 
  * @author dimitri remy
  * 
@@ -13,7 +13,7 @@ public class ResourcefulUser<R extends Resource> {
 	private String nameUser;
 
 	/**
-	 * builder from this class
+	 * builder for this class
 	 * 
 	 * @param nameUser
 	 *            name of swimmer used a resource.
@@ -32,14 +32,14 @@ public class ResourcefulUser<R extends Resource> {
 	}
 
 	/**
-	 * method emptying the {@link ResourcefulUser}.
+	 * method which emptying the {@link ResourcefulUser}.
 	 */
 	public void resetResource() {
 		this.resource = null;
 	}
 
 	/**
-	 * method modifying the {@link ResourcefulUser}.
+	 * method which modifying the {@link ResourcefulUser}.
 	 * 
 	 * @param r
 	 *            new resource from the {@link ResourcefulUser}
