@@ -3,7 +3,7 @@ package pool;
 import resource.Basket;
 
 /**
- * class from representing a pool of baskets
+ * class wich represents a pool of baskets
  * 
  * @author dimitri remy
  * 
@@ -19,7 +19,9 @@ public class BasketPool extends ResourcePool<Basket> {
 	public BasketPool(int nbResource) {
 		super(nbResource);
 	}
-
+	/**
+	 * @param number of resources
+	 */
 	@Override
 	protected void createPool(int nbResource) {
 		for (int i = 0; i < nbResource; i++) {
@@ -27,7 +29,9 @@ public class BasketPool extends ResourcePool<Basket> {
 		}
 
 	}
-
+	/**
+	 * get the resource name
+	 */
 	@Override
 	public String getResourceName() {
 		return "Basket";

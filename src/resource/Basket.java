@@ -3,7 +3,7 @@ package resource;
 /**
  * class representing a basket in a swimming pool.
  * 
- * @author dimitri remy
+ * @author Dimitri Charneux, Rémy Debue
  * 
  */
 public class Basket implements Resource {

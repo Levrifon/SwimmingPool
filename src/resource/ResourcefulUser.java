@@ -3,7 +3,7 @@ package resource;
 /**
  * class which handle a resource used by a swimmer
  * 
- * @author dimitri remy
+ * @author Dimitri Charneux, Rémy Debue
  * 
  * @param <R>
  *            type of resource used.
@@ -16,14 +16,14 @@ public class ResourcefulUser<R extends Resource> {
 	 * builder for this class
 	 * 
 	 * @param nameUser
-	 *            name of swimmer used a resource.
+	 *            name of the swimmer which used a resource.
 	 */
 	public ResourcefulUser(String nameUser) {
 		this.nameUser = nameUser;
 	}
 
 	/**
-	 * Method from return the resource of the {@link ResourcefulUser}.
+	 * Method which return the resource of the {@link ResourcefulUser}.
 	 * 
 	 * @return a resource
 	 */
@@ -50,8 +50,8 @@ public class ResourcefulUser<R extends Resource> {
 
 	/**
 	 * method returning a name of the user of the {@link ResourcefulUser}
-	 * 
-	 * @return
+	 *  
+	 * @return name of the user
 	 */
 	public String getNameUser() {
 		return this.nameUser;

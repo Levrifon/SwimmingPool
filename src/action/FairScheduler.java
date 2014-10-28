@@ -1,7 +1,11 @@
 package action;
 import java.util.Iterator;
 
-
+/**
+ * 
+ * @author Dimitri Charneux, Rémy Debue
+ *
+ */
 public class FairScheduler extends Scheduler {
 	protected Iterator<Action> actionIterator;
 	public FairScheduler() {
@@ -12,7 +16,9 @@ public class FairScheduler extends Scheduler {
 	protected void removeAction() {
 		actionIterator.remove();
 	}
-
+	/**
+	 * return the next action of the list
+	 */
 	@Override
 	protected Action nextAction() {
 		if(actionIterator.hasNext()) {
@@ -27,6 +33,10 @@ public class FairScheduler extends Scheduler {
 		}
 		
 	}
+	/**
+	 * Add a swimmer in the action's list
+	 * @param swimmer
+	 */
 	public void addAction(Swimmer swimmer) {
 		actions.add(swimmer);
 		actionIterator = actions.iterator();

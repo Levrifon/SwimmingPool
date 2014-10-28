@@ -3,7 +3,7 @@ package resource;
 /**
  * class representing a resource.
  * 
- * @author dimitri remy
+ * @author Dimitri Charneux, Rémy Debue
  * 
  */
 public interface Resource {

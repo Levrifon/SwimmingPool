@@ -5,7 +5,12 @@ import java.util.NoSuchElementException;
 import pool.ResourcePool;
 import resource.Resource;
 import resource.ResourcefulUser;
-
+/**
+ * 
+ * @author Dimitri Charneux, Rémy Debue
+ *
+ * @param <T>
+ */
 public class TakeResourceAction<T extends Resource> extends Action {
 	private boolean fini;
 	private ResourcefulUser<T> user;

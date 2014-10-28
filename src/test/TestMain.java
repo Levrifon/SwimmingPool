@@ -1,4 +1,4 @@
-package test;
+/*package test;
 
 import main.Pool;
 
@@ -24,4 +24,4 @@ public class TestMain {
 		
 	}
 
-}
+}*/

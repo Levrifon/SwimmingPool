@@ -3,7 +3,7 @@ package exception;
 /**
  * Exception returned when a action is finished
  * 
- * @author dimitri remy
+ * @author Dimitri Charneux, Rémy Debue
  * 
  */
 public class ActionFinishedException extends Exception {

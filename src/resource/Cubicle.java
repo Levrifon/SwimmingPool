@@ -3,7 +3,7 @@ package resource;
 /**
  * class representing a cubicle from wear and unwear in a swimming pool.
  * 
- * @author dimitri
+ * @author Dimitri Charneux, Rémy Debue
  * 
  */
 public class Cubicle implements Resource {

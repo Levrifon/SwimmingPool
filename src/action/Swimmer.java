@@ -8,7 +8,7 @@ import resource.ResourcefulUser;
 
 /**
  * 
- * @author debue,charneux
+ * @author Dimitri Charneux, Rémy Debue
  * 
  */
 
@@ -20,7 +20,15 @@ public class Swimmer extends SequentialScheduler {
 	private ResourcefulUser<Basket> user_basket;
 	private ResourcefulUser<Cubicle> user_cubicle;
 	private int unwearTime, swimmingTime, wearTime;
-
+	/**
+	 * Constructor of the Swimmer with his name, the basketpool, the cubiclepool and the duration of unwear,swim,wear
+	 * @param name
+	 * @param baskets
+	 * @param cubicles
+	 * @param i
+	 * @param j
+	 * @param k
+	 */
 	public Swimmer(String name, BasketPool baskets, CubiclePool cubicles,
 			int i, int j, int k) {
 		super();
@@ -34,7 +42,9 @@ public class Swimmer extends SequentialScheduler {
 		user_cubicle = new ResourcefulUser<Cubicle>(this.getName());
 		initAction();
 	}
-
+	/**
+	 * Initialize all his proper action
+	 */
 	public void initAction(){
 		actions.add(new TakeResourceAction<Basket>(user_basket, basket));
 		actions.add(new TakeResourceAction<Cubicle>(user_cubicle, cubicle));
@@ -46,7 +56,10 @@ public class Swimmer extends SequentialScheduler {
 		actions.add(new FreeResourceAction<Cubicle>(user_cubicle, cubicle));
 		actions.add(new FreeResourceAction<Basket>(user_basket, basket));
 	}
-	
+	/**
+	 * 
+	 * @return name of the swimmer
+	 */
 	public String getName() {
 		return name;
 	}

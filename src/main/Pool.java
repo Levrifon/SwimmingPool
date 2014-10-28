@@ -14,7 +14,7 @@ import pool.CubiclePool;
 public class Pool {
 
 	/**
-	 * method for run the application
+	 * method which run the application
 	 * 
 	 * @param args
 	 */
